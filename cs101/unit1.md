@@ -365,3 +365,31 @@ speed_of_light = 299792458.0
 cycles_per_second = 2700000000.0
 print speed_of_light / cycles_per_second
 ```
+======
+###Variables Can Vary
+The value a variable refers to can change. When a variable name is used, it always refers to the last value assigned to that variable.
+
+For example, you can change the value of **cycles_per_second**. Suppose you have a faster processor:
+
+```
+speed_of_light = 299792458# meters per second
+cycles_per_second = 27000000000.# 2.7GHz
+cycle_distance = speed_of_light / cycles_per_second
+cycle_per_second = 2800000000.# 2.8 GHz
+print cycle_distance
+0.111034243704
+
+cycle_distance = speed_of_light/ cycles_per_second
+print cycle_distance
+0.107068735
+```
+Since the value that a variable refers to can change, the same exact expression can have different values at the different times it is executed.
+
+This gets more interesting when we use the same variable on both sides of an assignment. The right side is evaluated first, using the current value of the variable. Then the assignment is done using that value. In the following expressions, the value of days changes from 49 to 48 and then to 47 as the expression changes:
+```
+        days = 7 * 7# after the assignment, days refers to 49
+        days = 48 # after the assignment, days refers to 48
+        days = days - 1# after the assignment, days refers to 47
+        days = days - 1# after the assignment, days refers to 46
+```
+It is important to remember that although we use = for assignment it does not mean equality. You should think of the = sign in Python as an arrow, ← , showing that the value the right side evaluates to is being assigned to the variable name on the left side.
