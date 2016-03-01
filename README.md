@@ -1,10 +1,5 @@
 # Python
 
-*Udacity Coursework*
-
-by Jenny Owens
-
----
 
 ### Information
 
