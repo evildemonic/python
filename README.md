@@ -38,6 +38,11 @@ languages) as well!
 * HTML
 * CSS
 * Javascript
+* Jquery
+* SQL
+* PHP
 * Raspberry Pi
 * Scrum
 * Kanban
+* Agile Manifesto
+* SASS
