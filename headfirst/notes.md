@@ -76,3 +76,34 @@ cast.insert(0, "Chapman")
 print(cast) 
 ```
 ['Chapman', 'Cleese', 'Palin', 'Jones', 'Idle', 'Gilliam']
+
+**To insert data INTO an existing item on a list:**
+
+```python
+movies.insert(1, 1975)
+
+movies.insert(3, 1979)
+
+movies.append(1983)
+```
+
+```python
+movies = ["The Holy Grail", 1975, "The Life of Brian", 1979, "The Meaning of Life", 1983]
+```
+
+```python
+fav_movies = ["The Holy Grail", "The Life of Brian"]
+
+print(fav_movies[0])
+print(fav_movies[1])
+```
+To continue the above code, use a **for** loop:
+
+```python
+fav_movies = ["The Holy Grail", "The Life of Brian"]
+
+for each_flick in fav_movies: 
+    print (each_flick)
+```
+
+
