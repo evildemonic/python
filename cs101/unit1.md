@@ -70,3 +70,5 @@ There are two parts to the Python programming environment you will see in your w
  2. The bottom part is an output window, where you can see the results of running your code.
 
 To try running your code, click the "Run" button below the editor.
+
+![image](http://i.imgur.com/1PMUL2R.png)
