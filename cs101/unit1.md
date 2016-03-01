@@ -171,3 +171,91 @@ The replacement can be any sequence of zero or more non-terminals or terminals.
 Terminals never appear on the left side of a rule. Once you get to a terminal there is nothing else you can replace it with. Here is an example showing how to derive a sentence by following the replacement rules:
 
 ![image](http://i.imgur.com/UcvRhJ3.png)
+
+Sentence → Subject Verb Object
+
+→ Noun Verb Object
+
+→ **I** Verb Object
+
+→ **I Like** Object
+
+→ **I Like** Noun
+
+→ **I Like Python**
+
+The important thing about a replacement grammar is that we can describe an infinitely large language with a small set of precise rules.
+
+======
+
+###Quiz 4: Eat Quiz
+
+Which of these sentences can be produced from this grammar, starting from sentence?
+
+a. Python Eat Cookies
+b. Python Eat Python
+c. I Like Eat
+
+**Answer:** (a) & (b)
+
+======
+
+###Python Expressions
+
+An **expression** is something that has a value. Here are some examples of expressions in Python:
+
+```
+3
+1 + 1
+7 * 7 * 24 * 60
+```
+Here is one of the rules of the Python grammar for making expressions:
+
+Expression → Expression Operator Expression
+
+The Expression non-terminal that appears on the left side can be replaced by an Expression, followed by an Operator, followed by another Expression. For example, 1 + 1 is an Expression Operator Expression.
+
+The interesting thing about this rule is that it has Expression on both the left and right sides! This looks circular, and would be, except we also have other rules for Expression that do not include Expression on the right side. This is an example of a **recursive definition**. To make a good recursive definition you need at least two rules:
+
+1. A rule that defines something in terms of itself.
+Expression → Expression Operator Expression
+
+2. A rule that defines that thing in terms of something else that we already know.
+Expression → Number
+
+Recursive definitions are a very powerful idea in computer science. They allow us to define infinitely many things using a few simple rules. You will see this more in Unit 6.
+
+Here are some of the Python grammar rules for arithmetic expressions:
+
+* Expression → Expression Operator Expression
+* Expression → Number
+* Operator → **+**
+* Operator → *****
+* Number → **0, 1, ...***
+
+
+Here is an example derivation using this grammar:
+
+* Expression → Expression Operator Expression
+* → Expression + Expression
+* → Expression + Number
+* → Expression **+ 1**
+* → Expression Operator Expression **+ 1**
+* → Number Operator Expression **+ 1**
+* → 2 Operator Expression **+ 1**
+* → 2 * Expression **+ 1**
+* → 2 * Expression Operator Expression **+ 1**
+* → 2 * Number Operator Expression **+ 1**
+* → 2 * 3 Operator Expression **+ 1**
+* → 2 * 3 * Expression **+ 1**
+* → 2 * 3 * Number **+ 1**
+* → **2 * 3 * 3 + 1**
+* (Note: the example here is slightly different than the one in the video. The 3+3 expression has been changed to 3*3, since the precedence rules in Python would have grouped 2 * 3 + 3 + 1 as (2 * 3) + 3 + 1, so it would not be interpreted as shown in the derivation.)
+
+We need to add one more rule to our expression grammar to be able to produce all of the expressions we have used so far:
+
+* Expression → (Expression)
+ 
+======
+
+###Quiz 5: Python Expressions
