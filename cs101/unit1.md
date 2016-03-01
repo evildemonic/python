@@ -79,3 +79,26 @@ Find the value of something in Python by using print like this:
 print 3
 3
 ```
+Use a Python expression to return a value. Here are some examples:
+```
+1 + 1   #addition
+2 - 1   #subtraction
+2 * 6   #multiplication
+```
+You can compose expressions to make more complicated expressions, such as:
+```
+52 * 3 + 12 * 9
+```
+You can also use parentheses to group expressions:
+```
+(52 * 3) + (12 * 9)
+```
+which is different from:
+```
+52 * (3 + 12) * 9
+```
+The code below prints out the number of seconds in a year:
+```
+print 365 * 24 * 60 * 60
+31536000
+```
