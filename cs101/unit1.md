@@ -61,3 +61,12 @@ What is a programming language?
 ======
 
 ###Getting Started with Python Programming
+
+We have provided a way for you to run Python programs using your web browser. You do not need to install any extra programs to do this.
+
+There are two parts to the Python programming environment you will see in your web browser:
+
+ 1. The top part is an editor, where you can write and edit code.
+ 2. The bottom part is an output window, where you can see the results of running your code.
+
+To try running your code, click the "Run" button below the editor.
