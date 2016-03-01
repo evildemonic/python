@@ -122,3 +122,52 @@ Write a Python program that prints out the number of minutes in seven weeks. You
 
 print 7 * 7 * 24 * 60
 ```
+======
+
+###Would You Rather
+Why should you learn new languages, like Python, to program computers, rather than using natural languages like English or Mandarin?
+
+There are many reasons why a designed language like Python is better for writing programs than a natural language like English. One problem with natural languages is that they are ambiguous. Hence, not everyone will interpret the same phrase the same way. To program computers, it is important that we know exactly what our programs mean, and that the computer will run them with the meaning we intended. Another problem with natural language is that they are very verbose. To say something with the level of precision needed for a computer to be able to follow it mechanically would require an awful lot of writing. You want your programs to be short so it is less work to write them, and so that it is easier to read and understand them.
+
+======
+
+###Grammar
+Compared to a natural language, programming languages adhere to a strict grammatical structure. In English, even if a phrase is written or spoken incorrectly, it can still be understood with the help of context or other cues. On the other hand, in a programming language like Python, the code must match the language grammar exactly. The Python interpreter has no idea what to do with input that is not in the Python language, so it produces an error.
+
+**Basic English Grammar Rules:**
+
+Sentence → Subject Verb Object
+
+Subject → Noun
+
+Object → Noun
+
+Verb → **Eat**
+
+Verb → **Like**
+
+Noun → **I**
+
+Noun → **Python**
+
+Noun → **Cookies**
+
+When programming language grammar is not followed the interpreter will return a SyntaxError message. This means that the structure of the code is inconsistent with the rules of the programming language.
+
+======
+
+###Backus-Naur Form
+
+The notation we used to describe the grammar is known as Backus-Naur Form, which was introduced in the 1950s by John Backus, the lead designer of the Fortran programming language at IBM.
+
+The purpose of Backus-Naur Form is to describe a programming language in a simple and concise manner. The structure of this form is:
+
+```
+<Non-Terminal> → replacement
+```
+
+The replacement can be any sequence of zero or more non-terminals or terminals.
+
+Terminals never appear on the left side of a rule. Once you get to a terminal there is nothing else you can replace it with. Here is an example showing how to derive a sentence by following the replacement rules:
+
+![image](http://i.imgur.com/UcvRhJ3.png)
