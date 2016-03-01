@@ -307,3 +307,61 @@ A processor has to be small to execute programs quickly. If your computer's proc
 # nanosecond = 1.0/1000000000  one billionth of a second
 print 299792458 * 100 * 1.0/1000000000
 ```
+======
+
+###Admiral Grace Hopper (1906- 1992)
+Grace Hopper was a pioneer in computing who was known for walking around with nanosticks. Nanosticks are pieces of wire that are the length light travels in a nanosecond, about 30 cm.
+
+Hopper wrote one of the first programming languages, COBOL, which was for a long time the world's most widely used programming language. Hopper built the first compiler. A compiler is a program that takes as input a program in a programming language easy for humans to write and outputs a program in another language that is easier for computers to execute. The difference between a compiler and an interpreter like Python is that a compiler does all the work at once and creates a new program, whereas, the interpreter converts the source code one step at a time as the program runs.
+
+When Grace Hopper started building the first compiler, most people did not believe it was possible for a computer program to produce other computer programs: "Nobody believed that I had a running compiler and nobody would touch it. They told me computers could only do arithmetic."
+
+======
+
+###Variables
+A **variable** is a name that refers to a value. In Python, we can use any sequence of letters and numbers and underscores (_)when we want to make a variable name, so long as it does not start with a number. Here are some examples of valid variable names:
+```
+processor_speed
+n
+Dorina
+item73
+```
+To introduce a new variable, we use an assignment statement:
+* Name = Expression
+After executing an assignment expression, the name refers to the value of the expression on the right side of the assignment:
+```
+speed_of_light = 299792458
+```
+We can use the variable name anywhere we want and it means the same things as the value it refers to. Here is an expression using the name to print out the speed of light in centimeters/sec:
+```
+print speed_of_light * 100
+```
+You can create new variables to keep track of values in programs. Here is an expression to find the length of the nanostick in centimeters:
+```
+speed_of_light = 299792458
+billionth = 1.0 / 1000000000
+nanostick = speed_of_light * billionth * 100
+print nanostick
+```
+======
+###Quiz 7: Variables
+Given the variables defined below, write Python code that prints out the distance, in meters, that light travels in one processor cycle. We use the hash mark (#) to introduce a comment. After the hash, we can write anything we want. The rest of the line is treated as a comment. The comment is not interpreted by the Python interpreter, but it is useful for humans reading the code.
+
+Compute this by dividing the speed of light by the number of cycles per second.
+```
+speed_of_light = 299792458      # meters per second
+cycles_per_second = 27000000000.  # 2.7 GHz
+```
+**Answer:** 
+```
+# Given the variables defined here, write Python 
+# code that prints out the distance, in meters, 
+# that light travels in one processor cycle. 
+
+# speed_of_light in meters per second
+# cycles_per_second is 2.7 GHz
+
+speed_of_light = 299792458.0 
+cycles_per_second = 2700000000.0
+print speed_of_light / cycles_per_second
+```
