@@ -393,6 +393,7 @@ This gets more interesting when we use the same variable on both sides of an ass
         days = days - 1# after the assignment, days refers to 46
 ```
 It is important to remember that although we use = for assignment it does not mean equality. You should think of the = sign in Python as an arrow, ← , showing that the value the right side evaluates to is being assigned to the variable name on the left side.
+
 ======
 ###Quiz 8: Varying Variables Quiz 1
 What is the value of hours after running this code:
