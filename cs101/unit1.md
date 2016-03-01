@@ -432,3 +432,28 @@ seconds = minutes * 60
 print seconds
 1860
 ```
+======
+
+###Quiz 10: Spirit Age
+
+Write Python code that defines the variable age to be your age in years, and then prints out the number of days you have been alive. If you don't want to use your real age, feel free to use your age in spirit instead.
+
+```
+# Write python code that defines the variable 
+# age to be your age in years, and then prints 
+# out the number of days you have been alive.
+
+age = 33
+days = age * 365
+print days
+```
+
+**Answer:**
+
+```
+age = 26
+days_per_year = 365
+days_alive = age * days_per_year
+print days_alive
+9490
+```
