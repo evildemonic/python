@@ -28,7 +28,7 @@ What is the goal of Unit 1 ?
 * c. Write code to extract a link from a web page.
 * d. Write code to rank web pages.
  
-**Answer:** (a), (b), & (c)
+**Answer:** a, b, and c. We will look at ranking web pages in Unit 6.
 
 ======
 
@@ -56,7 +56,7 @@ What is a programming language?
 * d. a language designed to be read by humans, and written by computers
 * e. a language designed to be read and written by humans, and executed by computers
 
-**Answer:** (a), (b), (c), (d), & (e)
+**Answer:** All are true, but e is the best answer. In particular, it is important that programs can be read and understood by humans, even if they will also be executed by computers.
 
 ======
 
@@ -196,7 +196,7 @@ a. Python Eat Cookies
 b. Python Eat Python
 c. I Like Eat
 
-**Answer:** (a) & (b)
+**Answer:** a & b, follow the rules
 
 ======
 
@@ -268,7 +268,7 @@ c. (1 * (2 * (3 * 4)))
 d. + 3 3
 e. (((7)))
 
-**Answer:** (a), (c), & (e)
+**Answer:** a. valid, b. not valid, doesn't follow rule, expression --> (expression), b/c have to have ( ) on right and left, c. valid, d. not valid doesn't follow expression a Expression Operator Expression, e. valid, nested parentheses valid but unnecessary
 
 ======
 
@@ -307,6 +307,12 @@ A processor has to be small to execute programs quickly. If your computer's proc
 # nanosecond = 1.0/1000000000  one billionth of a second
 print 299792458 * 100 * 1.0/1000000000
 ```
+Note that with division, Python still reads the result as an integer and the result is truncated to the resulting whole number, not rounded. For a better result, we should make one of the numbers a floating point number by adding a decimal point. Here, we changed 1 to 1.0:
+```
+print 299792458 * 100 * 1.0/1000000000
+29.9792458
+```
+
 ======
 
 ###Admiral Grace Hopper (1906- 1992)
@@ -365,6 +371,17 @@ speed_of_light = 299792458.0
 cycles_per_second = 2700000000.0
 print speed_of_light / cycles_per_second
 ```
+You could also solve this by introducing another variable:
+```
+        speed_of_light = 299792458 # meters per second
+cycles_per_second = 27000000000. # 2.7GHz
+cycle_distance = speed_of_light/ cycles_per_second
+
+print cycle_distance
+0.111034243704
+```
+This is more useful since now we can easily use **cycle_distance** in other computations.
+
 ======
 ###Variables Can Vary
 The value a variable refers to can change. When a variable name is used, it always refers to the last value assigned to that variable.
@@ -422,6 +439,14 @@ minutes = minutes + 1
 seconds = minutes * 60
 ```
 **Answer:** Error
+
+Error. The first assignment has minutes on the right side, but it was not yet defined since we did not yet use minutes on the left side of an assignment. The error Python gives for this is a NameError:
+```
+Traceback (most recent call last):
+        File "/code/knowvn/input/test.py", line 2, in <module>
+                        minutes = minutes +1
+NameError: name 'minutes' is not defined
+```
 
 For Python to be able to output a result, you always need to define a variable by assigning a value to it, before using it.
 
@@ -616,6 +641,16 @@ which of these pairs are two things with the exact same value?
 
 **Answer:** (a), (b), & (e)
 
+a, b and e. For c, the first expression is a two-character string, where the second is the one-character string of the letter at position 1. For d, the results are the same only if the value of s contains at least two characters. For example, if s = 'a', the first expression produces an indexing error and the second expression outputs 'i'.
+
+```
+<string>[<expression>] --> one-character string
+```
+
+```
+<string>[<expression>:<expression>] --> string that is a subsequence of the characters in the string
+```
+
 ======
 
 ###Selecting Sub-Sequences
@@ -654,3 +689,224 @@ When indexing a string that is "Blank" (i.e. string = ""), the following rules a
 * print string [-#:-#] --> would yield "" NOT an error!
 * print string [#:-#] --> would yield "" NOT an error!
 * print string [0:0] --> would yield "" NOT an error!
+
+======
+
+###Quiz 14: Capital Udacity
+
+Write Python code that prints out Udacity (with a capital U), given the definition:
+
+```
+s = 'audacity'
+```
+
+```
+# Write Python code that prints out Udacity (with a capital U), 
+# given the definition of s below.
+
+s = 'audacity'
+print s[1:].title()
+```
+
+**Answer:** 
+
+```
+s = 'audacity'
+print 'U' + s[2:]
+```
+
+======
+
+###Quiz 15: Understanding Selection
+
+For any string,
+
+```
+s= '<any string>'
+```
+which of these is always equivalent to s?
+
+* a. s[:]
+* b. s + s[0:-1 +1]
+* c. s[0:]
+* d. s[:-1]
+* e. s[:3] + s[3:]
+
+**Answer:** (a), (b), (c), & (e) Note that e is equivalent even if s has fewer than three characters!
+
+```
+<string>.find(<string>)
+```
+
+======
+
+###Finding Strings in Strings
+
+The find method is a built in operation, or method, provided by Python, that operates on strings. The output of find is the position of the string where the specified sub-string is found.
+
+```
+<search string="">.find(<target string="">)
+```
+
+If the target string is not found anywhere in the search string, then the output will be -1.
+
+Here are some examples (try them yourself in the interpreter):
+
+```
+pythagoras = 'There is geometry in the humming of the strings, there is music in the spacing of the spheres. '
+
+print pythagoras.find('string')
+40
+print pythagoras[40:]
+'strings, there is music in the spacing of the spheres.'
+print pythagoras.find('T')
+0
+print pythagoras.find('sphere')
+86
+print pythagoras[86:]
+spheres.
+print pythagoras.find('algebra')
+-1
+```
+
+======
+
+###Quiz 16: Testing
+
+Which of the following evaluate to -1:
+
+* a. 'test'.find('t')
+* b. "test".find('st')
+* c. "Test".find('te')
+* d. 'west'.find('test')
+
+**Answer:** (c) & (d) The find method returns -1 when the target string is not in the first string: c and d
+
+======
+
+###Quiz 17: Testing 2
+
+For any string,
+
+```
+s = '<any string>'
+```
+
+which of the following always has the value 0?
+
+* a. s.find(s)
+* b. s.find('s')
+* c. 's'.find('s')
+* d. s.find(' ')
+* e. s.find(s + '!!!') +1
+
+**Answer:** a. yes, no matter what string s is we will always find s at the beginning of itself, b. no, first letter has to be s, c. yes, d. yes, e. yes - the s.find(s + '!!!') part always evaluates to -1, since you can never find a string longer than s in s. Adding 1 to this produces 0.
+
+======
+
+###Find with Numbers
+
+In addition to passing in a target string to find, you can also pass in a number:
+
+```
+<search string="">.find(<target string="">, <number>)
+```
+
+The number input is the position in the search string where find will start looking for the target string. So, the output is a number giving the position of the first occurrence of the target string in the search string at, or after the input position. If there is no occurrence at or after that position, the output is -1.
+
+For example:
+
+```
+danton = "De l'audace, encore de l'audace, toujours de l'audace."
+print danton.find('audace')
+5
+print danton.find('audace', 0)
+5
+print danton.find('audace', 5)
+5
+print danton.find('audace', 6)
+25
+print danton.find('audace', 25)
+25
+print danton.find('audace', 48)
+-1
+```
+
+======
+
+###Quiz 18: Find with Numbers
+
+For any variables **s** and **t** that are strings, and i that is a number:
+
+which of these are equivalent to s.find(t,i):
+
+* a. s[i: ].find(t)
+* b. s.find(t)[ :i]
+* c. s[i: ].find(t) + i
+* d. s[i: ].find(t[i: ])
+
+**Answer:** None of the above are equivalent! This was a tricky question. Choice c is almost equivalent, except for the case where t is not found at all in s[i:], and the output of the find is -1.
+
+======
+
+###Extracting Links
+
+A **web page** is really just a long string of characters. Your **browser** renders the web page in a way that looks more attractive than just the string of characters. You can view the string of characters for any web page in your browser. How to do this depends on the browser you are using. For Chrome and Firefox, right-click anywhere on the page that is not a link and select "View Page Source". For Internet Explorer, right-click and select "View Source".
+
+Select View Page Source from the menu. The raw string for the web page pops up in a new window:
+
+For our web crawler, the important thing is to find the links to other web pages in the page. We can find those links by looking for the anchor tags that match this structure:
+
+```
+<a href="<url>">
+```
+
+For example, here is a link to the News/Blag page:
+```
+<a href="http://blag.xkcd.com"/>
+```
+
+To build our crawler, for each web page we want to find all the link target URLs on the page. We want to keep track of them and follow them to find more content on the web. For this unit, we will do the first step which is to extract the first target URL from the page. In Unit 2, we will see how to keep going to get all the link targets, and in Unit 3, we will see how to keep track of them to be able to crawl the target pages. For now, our goal is to take the text from a web request and find the first link target in that text. We can do this by finding the anchor tag, 
+```
+<a href="
+```
+, and then extract from that tag the URL that is found between the double quotes. We will assume that with the page's contents in a variable, page.
+
+======
+
+###Quiz 19: Extracting Links
+
+Write Python code that initializes the variable **start_link** to be the value of the position where the first 'http://udacity.com'.
+
+```
+page = '<contents of a web page>'
+start_link = page.find('<a href=')
+
+[ your code here ]''
+
+print url
+http://udacity.com
+```
+
+**Answer:** 
+
+```
+# Write Python code that initializes the variable
+# start_link to be the value of the position
+# where the first '<a href=' occurs in a page.
+
+page = '''<div id="top_bin"> <div id="top_content" class="width960">
+   <div class="udacity float-left"> <a href="/">'''
+
+start_link = page.find('<a href=')
+left = page.find('"', start_link) + 1
+right = page.find('"', left)
+
+url = page[left:right]
+```
+
+```
+start_link = page.find('<a href=')
+```
+
+**Yay! You did it and are off to a great start!** You've learned about programs, variables, expressions, and strings, and a well on your way to building a web crawler. Next unit, we will learn some big ideas in computer science that will make this code more useful and enable us to get all the links on the page, not just the first one.
