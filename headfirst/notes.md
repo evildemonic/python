@@ -13,4 +13,5 @@ To print out the second movie in the list:
 ```
 print(movies[1])
 ```
-Python starts counting from 0. 
+(Python starts counting from 0.)
+
