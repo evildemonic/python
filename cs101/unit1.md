@@ -259,3 +259,51 @@ We need to add one more rule to our expression grammar to be able to produce all
 ======
 
 ###Quiz 5: Python Expressions
+
+Which of the following are valid Python expressions that can be produced starting from Expression? There may be more than one.
+
+a. 3
+b. ((3)
+c. (1 * (2 * (3 * 4)))
+d. + 3 3
+e. (((7)))
+
+**Answer:** (a), (c), & (e)
+
+======
+
+###Quiz 6: Speed of Light
+
+Write Python code to print out how far light travels in centimeters after one nanosecond using the multiplication operator.
+
+* The speed of light is 299792458 meters per second.
+* One meter is 100 centimeters.
+* One nanosecond is one billionth (1/1000000000) of a second.
+
+The reason for computing this is because the distance light travels in a nanosecond really matters in computing! A typical computer today executes billions of steps every second. The processor I am using is a 2.7 GHz processor. The GHz means gigahertz which is a billion cycles per second. So, the computer executes 2700000000 cycles per second.
+
+You can think of each cycle as executing a very small instruction step. If you are using a Mac, you can see how fast your processor is by selecting the Apple menu and choosing About this Mac. If you are using a Windows 7 machine, open the Control Panel and select System and Security, then under System select View amount of RAM and processor speed.
+
+We can compute how far light travels in the time it takes for the computer to complete one cycle:
+```
+print 299792458 * 100 * 1.0/1000000000 *1/2.7
+11.1034243704
+```
+This is approximately 3/4 of the length of a dollar bill.
+![image](http://i.imgur.com/PEVNpYb.png)
+
+A **processor** is the part of the computer that carries out the steps specified in a computer program. Sometimes people call the processor the "central processing unit" or CPU.
+
+A processor has to be small to execute programs quickly. If your computer's processor were any larger than the size of a dollar bill, then you couldn't even send light from one end of the processor to the other before finishing the execution of a single step in a program.
+
+**Answer:** 
+
+```
+# Write Python code to print out how far light travels 
+# in centimeters in one nanosecond.  Use the values
+# defined below.    
+# speed_of_light = 299792458   meters per second
+# centimeters = 100            one meter is 100 centimeters
+# nanosecond = 1.0/1000000000  one billionth of a second
+print 299792458 * 100 * 1.0/1000000000
+```
