@@ -18,8 +18,7 @@ should you have any questions, comments, or feedback of any kind. I welcome crit
 and would love to hear from others who are currently learning Python (or other new 
 languages) as well!
 
-
-
+---
 
 ### Current Courses
 
