@@ -457,3 +457,200 @@ days_alive = age * days_per_year
 print days_alive
 9490
 ```
+======
+
+###Strings
+
+A **string** is a sequence of characters surrounded by quotes, either single or double.
+
+```
+'I am a string!'
+```
+The only requirement is that the string must start and end with the same kind of quote.
+```
+"I prefer double quotes!"
+```
+This allows you to include quotes inside of quotes as a character in the string.
+```
+"I'm happy I started with a double quote!"
+```
+Using the interpreter, notice how the color of the input changes before and after you put quotes on both sides of the string.
+
+What happens when you do not include any quotes:
+```
+print Hello
+```
+Without the quotes, Python reads Hello as a variable that is undefined:
+```
+NameError: name 'Hello' is not defined
+```
+As we saw above, Python will not print an undefined variable, which is why we get the NameError.
+
+======
+
+###Quiz 11: Valid Strings
+
+Which of the following are valid strings in Python?
+
+* a. "Ada"
+* b. 'Ada"
+* c. "Ada
+* d. Ada
+* e. ' "Ada'
+
+**Answer:** (a) & (e)
+
+======
+
+###Ada
+
+Augusta Ada King, Countess of Lovelace, 1815-1852, was arguably the world's first computer programmer. Grace Hopper wasn't the first person to think about using computers to do things other than arithmetic, but Ada probably was. In her 1843 notes on programming the Analytical Engine, she writes:
+
+It might act upon other things besides number, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine...
+
+The "it" King is referring to is the Analytical Engine, a mechanical programmable computer that Charles Babbage designed. Although he did not succeed in building it in the 1840s, he did have a design for it, which Ada was thinking about programming to compose music.
+
+======
+
+###Quiz 12: Hello!!!
+
+Define a variable, name, and assign to it a string that is your name.
+
+```
+# Define a variable, name, and assign to it a string that is your name.
+
+name = "Jenny"
+```
+
+======
+
+###Strings and Numbers
+
+We can also use the plus operator (+) on strings, but it has a different meaning from when it is used on numbers. With string, plus means **concatenation**.
+
+```
+<string> + <string> → outputs the concatenation of the two strings
+```
+Try concatenating the string 'Hello' to name.
+
+You can create a space between the strings by adding a space to one of the strings. You can also continue to add strings as many times as you need.
+
+```
+name = 'Dave'
+print 'Hello ' + name + '!' + '!' + '!'
+Hello Dave!!!
+```
+However, you cannot use the plus operator to combine strings and integers, as in the case of:
+```
+print 'My name is ' + 9
+```
+When you run this program you should see an error message like this:
+```
+TypeError: cannot concatenate 'str' and 'int' objects.
+```
+It is a bit surprising that you can multiply strings and integers!
+```
+print '!' * 12
+!!!!!!!!!!!!
+```
+This program multiplies the string by the integer to return 12 exclamation points!
+
+======
+
+###Indexing Strings
+
+When you want to select sub-sequences from a string, it is called indexing. Use the square brackets [] to specify which part of the string you want to select: 
+```
+<string>[<expression>]
+```
+For example, if you have the string 'udacity' and you want to select the character in the zero position (that is, the first character), you would write:
+```
+'udacity'[0]
+```
+The positions in a string are numbered starting with 0, so this evaluates to 'u'.
+
+Indexing strings is the most useful when the string is given using a variable:
+```
+'udacity'[0]
+'u'
+'udacity'[1 + 1]
+'a'
+name = 'Dave'
+name[0]
+'D'
+```
+When you use negative numbers in the index, Python starts counting from the back of the string:
+```
+name = 'Dave'
+print name[-1]
+'e'
+```
+or,
+```
+name='Dave'
+print name[-2]
+'v'
+```
+When you try to index a character in a position where there is none, Python produces an IndexError indicating that the index is out of range:
+```
+name = 'Dave'
+print name[4]
+IndexError: string index out of range
+```
+
+======
+
+###Quiz 13: Same Value
+
+Given the variable,
+```
+s = '<any string>'
+```
+which of these pairs are two things with the exact same value?
+
+* a. s[3], s[1+1+1]
+* b. s[0], (s+s)[0]
+* c. s[0] + s[1], s[0+1]
+* d. s[1], (s + 'ity') [1]
+* e. s[-1], (s + s)[-1]
+
+**Answer:** (a), (b), & (e)
+
+======
+
+###Selecting Sub-Sequences
+
+You can select a sub-sequence of a string by designating a starting position and an end position. Python reads the characters positions starting at 0, so that if you consider the string 'udacity,' that has 7 characters, there are 7 positions: 0,1...6, with 'u' being in the 0 position.
+
+```
+<string>[<expression>] → a one-character string
+<string>[<start expression>:<stop expression>] →
+```
+a string that is a sub-sequence of the characters in the string, from the start position up to the character before the stop position. If the start expression is missing, the sub-sequence starts from the beginning of the string; if the stop expression is missing, the sub-sequence goes to the end of the string.
+
+Examples:
+
+```
+word = 'assume'
+print word[3]
+'u'
+print word[4:6]
+'me'
+print word[4:]
+'me'
+print word[:2]
+'as'
+print word[:]
+'assume'
+```
+
+**MY NOTES: INDEXING BLANK STRINGS**
+
+When indexing a string that is "Blank" (i.e. string = ""), the following rules apply: where # is any number
+
+* print string [#] --> would yield an ERROR
+* print string [:] --> would yield "" NOT an error!
+* print string [#:#] --> would yield "" NOT an error!
+* print string [-#:-#] --> would yield "" NOT an error!
+* print string [#:-#] --> would yield "" NOT an error!
+* print string [0:0] --> would yield "" NOT an error!
