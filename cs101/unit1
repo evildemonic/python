@@ -1,0 +1,7 @@
+Unit 1: How to get started: your first program
+
+Find the value of something in Python by using print like this: 
+```python3
+print 3
+3
+```
