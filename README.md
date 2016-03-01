@@ -23,3 +23,10 @@ languages) as well!
 ### Current Courses
 * [CS 101: Intro to Computer Science](https://www.udacity.com/course/viewer#!/c-cs101)
 * [UD 036: Programming Foundations with Python](https://www.udacity.com/course/viewer#!/c-ud036)
+
+---
+
+### Current Books
+* [Head First Python](http://www.amazon.com/Head-First-Python-Paul-Barry/dp/1449382673)
+* [Programming Python](http://www.amazon.com/Programming-Python-Mark-Lutz/dp/0596158106)
+* [Python 3 for Absolute Beginners](http://www.amazon.com/Python-Absolute-Beginners-Experts-Source/dp/1430216328)
