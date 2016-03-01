@@ -72,3 +72,10 @@ There are two parts to the Python programming environment you will see in your w
 To try running your code, click the "Run" button below the editor.
 
 ![image](http://i.imgur.com/1PMUL2R.png)
+
+Find the value of something in Python by using print like this:
+
+```
+print 3
+3
+```
