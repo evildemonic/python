@@ -22,7 +22,7 @@ languages) as well!
 
 ### Current Courses
 * [CS 101: Intro to Computer Science](https://www.udacity.com/course/viewer#!/c-cs101)
-* [UD 036: Programming Foundations with Python](https://www.udacity.com/course/viewer#!/c-ud036)
+* [Stackskills: Become A Professional Python Programmer](https://stackskills.com/courses/become-a-professional-python-programmer/)
 
 ---
 
