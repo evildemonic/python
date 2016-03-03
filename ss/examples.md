@@ -166,13 +166,67 @@ else:
 
 ###Functions
 
+```python
+def example():
+    x = 1
+    y = 3
+    print(x+y)
+    
+    if x < y:
+    print(x,'is less than',y)
+    
+def main():
+    example()
+```
+
 ------
 
 ###Function Parameters
 
+```python
+def website(font,background_color,font_size,font_color):
+    print('font:',font)
+    print('bg:',background_color)
+    print('Font size:',font_size)
+    print('Font color:',font_color)
+    
+website('TNR','white','11','black')
+```
+
+```python
+def website(font='TNR',
+            background_color='white',
+            font_size=11,
+            font_color='black'):
+    print('font:',font)
+    print('bg:',background_color)
+    print('Font size:',font_size)
+    print('Font color:',font_color)
+
+website()
+```
+
 ------
 
 ###Global and Local Variables
+
+```python
+x = 6
+
+def example():
+    z = 5
+    print(z)
+    
+def example2():
+    z = 7 
+    print(z)
+    y = x + 1
+    print(y)
+    
+x = example2()
+
+print(x)
+```
 
 ------
 
