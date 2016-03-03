@@ -232,6 +232,41 @@ print(x)
 
 ###Common Python Errors
 
+```python
+#NameError: name 'varaible' is not defined
+variable = 55
+print(varaible) #mispelled
+```
+
+```python
+#Expected Indented Block
+def func1():
+
+def func2():
+    print(2)
+```
+
+```python
+#Unexpected Indent
+def task():
+    print('1')
+    
+print('2')
+
+    print('3')
+```
+
+```python
+#Didn't close string / EOL while scanning string literal
+
+print('Hey there how are you today?
+```
+
+```python
+#Didn't close print statement / unexpected EOF while parsing
+
+print('Hey there how are you today?'
+```
 ------
 
 ###Writing to a File
