@@ -271,17 +271,101 @@ print('Hey there how are you today?'
 
 ###Writing to a File
 
+```python
+#Will completely overwrite an existing file
+writeMe = 'Example text'
+
+saveFile = open('exampleWrite.txt','w') # 'w' = write
+saveFile.write(writeMe)
+saveFile.close()
+```
+
+------
+
+###Appending to a File
+
+```python
+#Appends an existing file; creates one if it doesn't exist
+appendMe = 'Some text'
+
+saveFile = open('exampleFile.txt','a') # 'a' = append
+saveFile.write('\n') # \t tab, \s space, \n new line 
+saveFile.write(appendMe)
+saveFile.close()
+```
+
 ------
 
 ###Reading From a File
+
+```python
+readMe = open('exampleFile.txt','r') # 'r' = Read
+print(readMe)
+```
+```python
+splitMe = readMe.split('\n)
+print(splitMe[2])
+```
+```python
+readme2 = open('exampleFile.txt','r').readlines()
+print(readMe2)
+```
 
 ------
 
 ###Classes
 
+```python
+class calc: 
+    
+    def add(x,y):
+        answer = x + y
+        print(answer)
+    def sub(x,y):
+        answer = x - y
+        print(answer)
+    def mult(x,y):
+        answer = x * y
+        print(answer)
+    def div(x,y):
+        answer = x / y
+        print(answer)
+
+calc.add(5,3)
+calc.mult(5,3)
+calc.div(5/3)
+calc.sub(5-3)
+```
+
 ------
 
 ###Input and Statistics
+
+```python
+name = input('What is your name?: ')
+print('Hello',name)
+```
+
+```python
+import statistics
+
+exList = [5,3,2,9,9,7,4,3,1,8,9]
+
+x = statistics.mean(exList)
+print(x)
+
+x = statistics.median(exList)
+print(x)
+
+x = statistics.mode(exList)
+print(x)
+
+x = statistics.stdev(exList)
+print(x)
+
+x = statistics.variance(exList)
+print(x)
+```
 
 ------
 
