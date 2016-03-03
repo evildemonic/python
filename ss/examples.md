@@ -371,9 +371,76 @@ print(x)
 
 ###Import Syntax
 
+```python
+import statistics
+
+exList = [5,6,2,1,6,7,2,2,7,3,7,7,7]
+
+print(statistics.mean(exList))
+```
+```python
+import statistics as s
+
+exList = [5,6,2,1,6,7,2,2,7,3,7,7,7]
+
+print(s.mean(exList))
+```
+```python
+from statistics import mean
+
+exList = [5,6,2,1,6,7,2,2,7,3,7,7,7]
+
+print(mean(exList))
+```
+```python
+from statistics import mean as m
+
+exList = [5,6,2,1,6,7,2,2,7,3,7,7,7]
+
+print(m(exList))
+```
+```python
+from statistics import mean, stdev
+
+exList = [5,6,2,1,6,7,2,2,7,3,7,7,7]
+
+print(mean(exList))
+print(stdev(exList))
+```
+```python
+from statistics import mean as m, stdev as s
+
+exList = [5,6,2,1,6,7,2,2,7,3,7,7,7]
+
+print(m(exList))
+print(s(exList))
+```
+```python
+from statistics import * #imports everything
+
+print(mean(exList))
+print(stdev(exList)) #, etc
+```
 ------
 
 ###Making Modules
+
+```python
+def exampleFunct(data):
+    print(data)
+    
+# >>> exampleFunc('this is a test')
+```
+
+```python
+import exampleModule
+
+exampleModule.exampleFunct('test')
+```
+
+```python
+
+```
 
 ------
 
