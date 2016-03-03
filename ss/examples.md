@@ -547,6 +547,3 @@ print(gradeDict['Jessy'])
 
 print(gradeDict['Jessy'][0])
 ```
-------
-
-###Project - Making a Python Program
