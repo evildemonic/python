@@ -438,17 +438,81 @@ import exampleModule
 exampleModule.exampleFunct('test')
 ```
 
-```python
+------
 
+###Error Handling - Try and Except
+
+```python
+#Can't convert 'int' object to str implicitly
+try:
+    print('Running the try...')
+    print('5'+5)
+    
+except Exception as e:
+    print(str(e))
+```
+```python
+try:
+    print('Running the try...')
+    print('5'+5) #or ('5'+x) for second except
+    
+#for TypeError
+except TypeError as t:
+    print('TypeError triggered')
+    
+#for NameError
+except NameError as n:
+    print('NameError triggered')
+    
+#for any other errors
+except Exception as e:
+    print('General Exception')
 ```
 
 ------
 
-###Error Handling - Try and Accept
-
-------
-
 ###Lists vs Tuples and List Manipulation
+
+```python
+#Tuple; immutable
+def example():
+    return 15,19
+    
+a,b = example()
+
+print(a)
+print(b)
+```
+```python
+#List; mutable
+x = [6,2,3,6,8,9,4,3]
+
+print(x)
+print(x[5])
+
+x.append(12) # adds 12 to the end of the list
+print(x)
+
+x.insert(5,7) # inserts 7 at the 5th position
+print(x) 
+
+x.remove(7) # removes the first 7
+print(x)
+
+print(x.index(12)) # what position a number is in
+
+print(x.count(3)) # number of times something is in the list
+```
+```python
+x = ['Spot','Cam','Jan','Dave','Zack']
+
+print(x)
+x.sort() # Alphebetizes list
+print(x)
+
+x.reverse() # Reverses List Order
+print(x)
+```
 
 ------
 
